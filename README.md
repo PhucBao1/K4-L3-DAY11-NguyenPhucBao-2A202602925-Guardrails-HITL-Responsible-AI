@@ -1,5 +1,11 @@
 # Day 11 — Controlled Agent Security (2026)
 
+> **Học viên:** Nguyễn Phúc Bảo · **MSSV:** 2A202602925
+>
+> **Chạy nhanh:** `python src/main.py --part 2` (guardrails) → `--part 3` (sinh `outputs/results.json`) → `--part 4` (red-team) → `python scripts/grade.py --submission-dir . --out outputs/grade_report.json`
+>
+> **Thiết kế Blue:** RateLimit (sliding window / user) → InputGuardrail (NFKC + bỏ zero-width, regex injection EN/VI, topic filter có bỏ dấu tiếng Việt) → LLM → OutputGuardrail (redact API key, password, `*.internal`, email, CCCD, SĐT). Audit log + monitoring là observer (không chặn). Egress: allowlist host HTTPS chính xác + chặn payload chứa secret/PII.
+
 > 👤 **Hình thức:** bài tập **cá nhân** (1 người / 1 MSSV).  
 > 🎯 **Mục tiêu:** xây **Blue** (phòng thủ), rồi red-team **Red** + **Red Advance**.  
 > ✅ Làm theo **Checkpoint 1 → 5** trong [`CHECKPOINTS.md`](CHECKPOINTS.md) · nộp theo [`SUBMISSION.md`](SUBMISSION.md).

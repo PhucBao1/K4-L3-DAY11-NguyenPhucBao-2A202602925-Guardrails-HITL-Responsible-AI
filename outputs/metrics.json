@@ -1,0 +1,23 @@
+{
+  "total_requests": 36,
+  "blocked_requests": 20,
+  "block_rate": 0.5555555555555556,
+  "rate_limit_hits": 5,
+  "judge_checks": 0,
+  "judge_fails": 0,
+  "judge_fail_rate": 0.0,
+  "alerts": [
+    {
+      "metric": "block_rate",
+      "value": 0.5555555555555556,
+      "threshold": 0.5,
+      "message": "High block rate 56% — possible attack campaign"
+    },
+    {
+      "metric": "rate_limit_hits",
+      "value": 5.0,
+      "threshold": 5.0,
+      "message": "5 rate-limit hits — possible flooding"
+    }
+  ]
+}
